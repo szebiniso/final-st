@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 import { useForm } from 'react-hook-form'
 import { registerSchema, TRegistration } from '../../utils/zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { client } from '../../utils/axios'
 import { toastError, toastSuccess } from '../../components/toasts'
 
@@ -44,7 +44,7 @@ const Registration = () => {
     return (
         <div className="flex items-center justify-center h-screen bg-black">
             <form
-                className="w-1/3 bg-[#202123] p-10 rounded-3xl flex flex-col gap-3"
+                className="lg:w-1/3 min-[320px]:w-full min-[320]:m-2 bg-[#202123] p-10 rounded-3xl flex flex-col gap-3"
                 onSubmit={handleSubmit(onRegister)}
             >
                 <h2 className="text-white text-3xl font-medium text-center mb-4">
@@ -60,6 +60,9 @@ const Registration = () => {
                     />
                 ))}
                 <Button title="REGISTER" type="submit" />
+                <Link to="/">
+                    <p className="text-white text-end">Log in</p>
+                </Link>
             </form>
         </div>
     )

@@ -54,7 +54,7 @@ const ProfileEdit = () => {
     return (
         <div className="h-screen bg-[#202123] flex items-center justify-center">
             <form
-                className="w-1/3 p-10 rounded-3xl flex flex-col gap-3"
+                className="lg:w-1/3 min-[320px]:w-full min-[320]:m-2 p-10 rounded-3xl flex flex-col gap-3"
                 onSubmit={handleSubmit(onUpdateUserData)}
             >
                 <h2 className="text-white text-3xl font-medium text-center mb-4">
